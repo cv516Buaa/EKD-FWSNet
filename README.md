@@ -25,9 +25,10 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets.
      Create tiny-imagenet-200 folder and download tiny-imagenet dataset. 
      Move 'tiny_imagenet-200_all' and 'anno' to tiny-imagenet-200 folder.
 
-**LoveDA**
+**CUB-200**
     
-     Unzip Train.zip, Val.zip, Test.zip and create Train, Val and Test list for Urban and Rural
+     Create CUB2011 folder and download CUB-200 dataset.
+     Move 'images', 'labels', 'train.txt' and 'test.txt' to this folder.
 
 ## ST-DASegNet
 
