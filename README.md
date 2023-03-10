@@ -51,24 +51,13 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets. If a
 
 **ImageNet-pretrained backbones** : In some experimental setting, we need to load ImageNet-pretrained backbones. In folder './KDCCB/models/backbone', please download and move 'resnet18-5c106cde.pth', 'resnet34-333f7ec4.pth', 'resnet50-19c8e357.pth' and 'resnet101-5d3b4d8f.pth' to here. No need to move EfficientNet ImageNet-pretrained models here. 
 
-We select deeplabv3 and Segformerb5 as baselines. Actually, we use deeplabv3+, which is a more advanced version of deeplabv3. After evaluating, we find that deeplabv3+ has little modification compared to deeplabv3 and has little advantage than deeplabv3.
-
-For LoveDA results, we evaluate on test datasets and submit to online server (https://github.com/Junjue-Wang/LoveDA) (https://codalab.lisn.upsaclay.fr/competitions/424). We also provide the evaluation results on validation dataset.
-
-<table>
-    <tr>
-    <td><img src="PaperFigs\LoveDA_Leaderboard_Urban.jpg" width = "100%" alt="LoveDA UDA Urban"/></td>
-    <td><img src="PaperFigs\LoveDA_Leaderboard_Rural.jpg" width = "100%" alt="LoveDA UDA Rural"/></td>
-    </tr>
-</table>
-
-1. Potsdam IRRG to Vaihingen IRRG:
+1. Lightweight baseline model optimization:
 
      ```
-     cd ST-DASegNet
+     cd ./experiments/Lightweight_ex
+     ## under this folder we provide all configuration files (.yaml) of lightweight EKD-FWSNet. In 'train.sh', you can flexibly switch each configuration files.
      
-     ./tools/dist_train.sh ./experiments/deeplabv3/config/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_Potsdam2Vaihingen.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Potsdam2Vaihingen.py 2
+     sh train.sh
      ```
 
 2. Vaihingen IRRG to Potsdam IRRG:
