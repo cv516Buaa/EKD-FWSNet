@@ -55,83 +55,38 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets. If a
 
      ```
      cd ./experiments/Lightweight_ex
-     ## under this folder we provide all configuration files (.yaml) of lightweight EKD-FWSNet. In 'train.sh', you can flexibly switch each configuration files.
+     ## under this folder we provide all configuration files (.yaml) of paper-mentioned lightweight EKD-FWSNet. In 'train.sh', you can flexibly switch each configuration files.
      
      sh train.sh
      ```
 
-2. Vaihingen IRRG to Potsdam IRRG:
+2. High-efficiency baseline model optimization:
 
     ```
-     cd ST-DASegNet
+     cd ./experiments/High-efficiency_ex
+     ## under this folder we provide all configuration files (.yaml) of paper-mentioned high-efficiency EKD-FWSNet. In 'train.sh', you can flexibly switch each configuration files.
      
-     ./tools/dist_train.sh ./experiments/deeplabv3/config/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_Vaihingen2Potsdam.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Vaihingen2Potsdam.py 2
+     sh train.sh
      ```
 
-3. Potsdam RGB to Vaihingen IRRG:
+3. Large-scale baseline model optimization:
 
      ```
-     cd ST-DASegNet
+     cd ./experiments/Large-scale_ex
+     ## under this folder we provide all configuration files (.yaml) of paper-mentioned Large-scale EKD-FWSNet. In 'train.sh', you can flexibly switch each configuration files.
      
-     ./tools/dist_train.sh ./experiments/deeplabv3/config/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_PotsdamRGB2Vaihingen.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_PotsdamRGB2Vaihingen.py 2
-     ```
-     
-4. Vaihingen RGB to Potsdam IRRG:
-
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/deeplabv3/config/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_Vaihingen2PotsdamRGB.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Vaihingen2PotsdamRGB.py 2
-     ```
-
-5. LoveDA Rural to Urban
-
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/deeplabv3/config_LoveDA/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_R2U.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config_LoveDA/ST-DASegNet_segformerb5_769x769_40k_R2U.py 2
-     ```
-
-6. LoveDA Urban to Rural
-
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/deeplabv3/config_LoveDA/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_U2R.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config_LoveDA/ST-DASegNet_segformerb5_769x769_40k_U2R.py 2
+     sh train.sh
      ```
 
 ### Testing
   
 Trained with the above commands, you can get a trained model to test the performance of your model.   
 
-1. Testing commands
-
+open 'train.sh' and add the argument '--is_offline 1'. The best model (.pth) will be automatically stored and loaded.
     ```
-     cd ST-DASegNet
+     cd ./experiments/Lightweight_ex(High-efficiency_ex, Large-scale_ex) 
      
-     ./tools/dist_test.sh yourpath/config.py yourpath/trainedmodel.pth --eval mIoU   
-     ./tools/dist_test.sh yourpath/config.py yourpath/trainedmodel.pth --eval mFscore 
-     ```
-
-2. Testing cases: P2V_IRRG_64.33.pth and V2P_IRRG_59.65.pth : [google drive](https://drive.google.com/drive/folders/1qVTxY0nf4Rm4-ht0fKzIgGeLu4tAMCr-?usp=sharing)
-
-    ```
-     cd ST-DASegNet
-     
-     ./tools/dist_test.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Potsdam2Vaihingen.py 2 ./experiments/segformerb5/ST-DASegNet_results/P2V_IRRG_64.33.pth --eval mIoU   
-     ./tools/dist_test.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Potsdam2Vaihingen.py 2 ./experiments/segformerb5/ST-DASegNet_results/P2V_IRRG_64.33.pth --eval mFscore 
-     ```
-     
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_test.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Vaihingen2Potsdam.py 2 ./experiments/segformerb5/ST-DASegNet_results/V2P_IRRG_59.65.pth --eval mIoU   
-     ./tools/dist_test.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Vaihingen2Potsdam.py 2 ./experiments/segformerb5/ST-DASegNet_results/V2P_IRRG_59.65.pth --eval mFscore 
+     sh train.sh
      ```
 
 If you have any question, please discuss with me by sending email to lyushuchang@buaa.edu.cn.
