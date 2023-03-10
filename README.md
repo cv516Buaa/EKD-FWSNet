@@ -17,6 +17,8 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets.
 
 **CIFAR**
 
+     Create CIFAR folder and download CIFAR dataset. Move 'cifar-10-batches-py' and 'cifar-100-python' to CIFAR folder.
+
 **Vaihingen**
 
      Move the 'ISPRS_semantic_labeling_Vaihingen.zip' and 'ISPRS_semantic_labeling_Vaihingen_ground_truth_eroded_COMPLETE.zip' to Vaihingen_IRRG folder 
