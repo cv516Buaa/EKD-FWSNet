@@ -49,7 +49,7 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets. If a
 
 ### Training
 
-**mit_b5.pth** : [google drive](https://drive.google.com/drive/folders/1cmKZgU8Ktg-v-jiwldEc6IghxVSNcFqk?usp=sharing) For SegFormerb5 based ST-DASegNet training, we provide ImageNet-pretrained backbone here.
+**ImageNet-pretrained backbones** : In some experimental setting, we need to load ImageNet-pretrained backbones. In folder './KDCCB/models/backbone', please download and move 'resnet18-5c106cde.pth', 'resnet34-333f7ec4.pth', 'resnet50-19c8e357.pth' and 'resnet101-5d3b4d8f.pth' to here. No need to move EfficientNet ImageNet-pretrained models here. 
 
 We select deeplabv3 and Segformerb5 as baselines. Actually, we use deeplabv3+, which is a more advanced version of deeplabv3. After evaluating, we find that deeplabv3+ has little modification compared to deeplabv3 and has little advantage than deeplabv3.
 
