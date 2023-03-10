@@ -35,29 +35,17 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets. If a
      Create imagenet folder and download ImageNet dataset.
      Move 'train', 'val' to this folder.
 
-## ST-DASegNet
+## EKD-FWSNet
 
 ### Install
 
 1. requirements:
     
-    python >= 3.7
+    python >= 3.5
         
     pytorch >= 1.4
         
     cuda >= 10.0
-    
-2. prerequisites: Please refer to  [MMSegmentation PREREQUISITES](https://mmsegmentation.readthedocs.io/en/latest/get_started.html).
-
-     ```
-     cd ST-DASegNet
-     
-     pip install -e .
-     
-     chmod 777 ./tools/dist_train.sh
-     
-     chmod 777 ./tools/dist_test.sh
-     ```
 
 ### Training
 
