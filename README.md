@@ -1,6 +1,6 @@
 # EKD-FWSNet
 
-This repo is the implementation of ["Make Baseline Model Stronger: Embedded Knowledge Distillation in Weight-Sharing Based Ensemble Network"](https://www.bmvc2021-virtualconference.com/assets/papers/0212.pdf). The BMVC paper is extended and submitted to TCSVT.
+This repo is the implementation of ["Make Baseline Model Stronger: Embedded Knowledge Distillation in Weight-Sharing Based Ensemble Network"](https://www.bmvc2021-virtualconference.com/assets/papers/0212.pdf). The BMVC paper is extended and submitted to TCSVT. 
 
 <table>
     <tr>
@@ -88,4 +88,4 @@ open 'train.sh' and add the argument '--is_offline 1'. The best model (.pth) wil
      
      sh train.sh
 
-If you have any question, please discuss with me by sending email to lyushuchang@buaa.edu.cn.
+To be honest, this repo contains some hardcoding parts, which may lead to confusion. If any question, please discuss with me by sending email to lyushuchang@buaa.edu.cn.
