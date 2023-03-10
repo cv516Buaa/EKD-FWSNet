@@ -157,12 +157,4 @@ Trained with the above commands, you can get a trained model to test the perform
      ./tools/dist_test.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Vaihingen2Potsdam.py 2 ./experiments/segformerb5/ST-DASegNet_results/V2P_IRRG_59.65.pth --eval mFscore 
      ```
 
-The ArXiv version of this paper is release. [Self-Training Guided Disentangled Adaptation for Cross-Domain Remote Sensing Image Semantic Segmentation](https://arxiv.org/pdf/2301.05526.pdf)
-
 If you have any question, please discuss with me by sending email to lyushuchang@buaa.edu.cn.
-
-# References
-Many thanks to their excellent works
-* [MMSegmentation](https://github.com/open-mmlab/mmsegmentation)
-* [MMGeneration](https://github.com/open-mmlab/mmgeneration)
-* [DAFormer](https://github.com/lhoyer/DAFormer)
