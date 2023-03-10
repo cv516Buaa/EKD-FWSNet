@@ -17,12 +17,11 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets.
 
 **CIFAR**
 
-     Create CIFAR folder and download CIFAR dataset. Move 'cifar-10-batches-py' and 'cifar-100-python' to CIFAR folder.
+     Create CIFAR folder and download CIFAR-10/100 dataset. Move 'cifar-10-batches-py' and 'cifar-100-python' to CIFAR folder.
 
-**Vaihingen**
+**tiny-ImageNet**
 
-     Move the 'ISPRS_semantic_labeling_Vaihingen.zip' and 'ISPRS_semantic_labeling_Vaihingen_ground_truth_eroded_COMPLETE.zip' to Vaihingen_IRRG folder 
-     python tools/convert_datasets/vaihingen.py yourpath/ST-DASegNet/data/Vaihingen_IRRG/ --clip_size 512 --stride_size 256
+     Create tiny-imagenet-200 folder and download tiny-imagenet dataset. Move 'tiny_imagenet-200_all' and 'anno' to tiny-imagenet-200 folder.
 
 **LoveDA**
     
