@@ -1,7 +1,6 @@
 # EKD-FWSNet
-# ST-DASegNet
 
-This repo is the implementation of ["Self-Training Guided Disentangled Adaptation for Cross-Domain Remote Sensing Image Semantic Segmentation"](https://arxiv.org/pdf/2301.05526.pdf). we refer to  [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) and [MMGeneration](https://github.com/open-mmlab/mmgeneration). Many thanks to SenseTime and their two excellent repos.
+This repo is the implementation of ["Make Baseline Model Stronger: Embedded Knowledge Distillation in Weight-Sharing Based Ensemble Network"](https://www.bmvc2021-virtualconference.com/assets/papers/0212.pdf). The BMVC paper is extended and submitted to TCSVT.
 
 <table>
     <tr>
