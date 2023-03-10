@@ -83,7 +83,8 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets. If a
 Trained with the above commands, you can get a trained model to test the performance of your model.   
 
 open 'train.sh' and add the argument '--is_offline 1'. The best model (.pth) will be automatically stored and loaded.
-    ```
+   
+     ```
      cd ./experiments/Lightweight_ex(High-efficiency_ex, Large-scale_ex) 
      
      sh train.sh
