@@ -11,16 +11,11 @@ This repo is the implementation of ["Make Baseline Model Stronger: Embedded Know
 
 ## Dataset Preparation
 
-We select Postsdam, Vaihingen and LoveDA as benchmark datasets and create train, val, test list for researchers to follow. 
+We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets. 
 
 **In the following, we provide the detailed commands for dataset preparation.**
 
-**Potsdam**
-     
-     Move the ‘3_Ortho_IRRG.zip’ and ‘5_Labels_all_noBoundary.zip’ to Potsdam_IRRG folder 
-     Move the ‘2_Ortho_RGB.zip’ and ‘5_Labels_all_noBoundary.zip’ to Potsdam_RGB folder
-     python tools/convert_datasets/potsdam.py yourpath/ST-DASegNet/data/Potsdam_IRRG/ --clip_size 512 --stride_size 512
-     python tools/convert_datasets/potsdam.py yourpath/ST-DASegNet/data/Potsdam_RGB/ --clip_size 512 --stride_size 512
+**CIFAR**
 
 **Vaihingen**
 
