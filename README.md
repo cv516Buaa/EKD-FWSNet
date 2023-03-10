@@ -11,7 +11,7 @@ This repo is the implementation of ["Make Baseline Model Stronger: Embedded Know
 
 ## Dataset Preparation
 
-We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets. 
+We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets. If any questions on finding or constructing experiment datasets, please contact us with the email in the end.
 
 **In the following, we provide the detailed commands for dataset preparation.**
 
@@ -29,6 +29,11 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets.
     
      Create CUB2011 folder and download CUB-200 dataset.
      Move 'images', 'labels', 'train.txt' and 'test.txt' to this folder.
+
+**ImageNet**
+    
+     Create imagenet folder and download ImageNet dataset.
+     Move 'train', 'val' to this folder.
 
 ## ST-DASegNet
 
