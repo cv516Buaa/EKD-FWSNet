@@ -84,10 +84,8 @@ Trained with the above commands, you can get a trained model to test the perform
 
 open 'train.sh' and add the argument '--is_offline 1'. The best model (.pth) will be automatically stored and loaded.
    
-     ```
      cd ./experiments/Lightweight_ex(High-efficiency_ex, Large-scale_ex) 
      
      sh train.sh
-     ```
 
 If you have any question, please discuss with me by sending email to lyushuchang@buaa.edu.cn.
