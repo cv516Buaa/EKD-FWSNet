@@ -1,0 +1,54 @@
+#type: CIFAR10, CIFAR-100
+dataloader:
+  type: CIFAR100
+  train:
+    meta_url: /home/supernet/DR_workspace/DR_project/datasets/CIFAR
+    loss_type: cross_entropy #TBD
+    scales: 32
+    shuffle: True
+    batch_size: 128
+    augmentation:
+      ratio: [0.5, 1]
+  
+  test:
+    meta_url: /home/supernet/DR_workspace/DR_project/datasets/CIFAR
+    scales: 32
+    shuffle: False
+    batch_size: 128
+
+  num_workers: 12
+  num_cls: 100
+  pi_mean: [0.485, 0.456, 0.406]
+  pi_std: [0.229, 0.224, 0.225]
+
+train_params:
+  resume: None  #TBD
+  num_epoch: 300
+  optimizer:
+    type: SGD
+    kwargs:
+      lr: 0.1
+      momentum: 0.9
+      weight_decay: 0.0001
+    
+  lr_schedule:
+    type: MultiStepLR
+    kwargs:
+      milestones: [150, 250]
+      gamma: 0.1  
+
+net:
+  name: R20_FWS_C100
+  branch_num: 3
+  subname: KDCCB.models.FWS_LW-Resnet_cifar.FWS_resnet20
+  kwargs:
+    KL_w: 60
+    num_classes: 100
+
+save_params:
+  save_dir: ./results/checkpoints/
+
+load_params:
+  load_dir: ./results/checkpoints/ckpt_best.pth.tar
+  vis_dir: ./results/vis_pred/
+  results_dir: ./results

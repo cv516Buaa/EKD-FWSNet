@@ -1,0 +1,71 @@
+#type: CIFAR-100, CUB-200, tiny-ImageNet, ImageNet
+dataloader:
+  type: CUB200
+  train:
+    meta_url: /home/supernet/DR_workspace/DR_project/datasets/CUB2011
+    loss_type: lbs_cross_entropy #TBD
+    scales: 224
+    shuffle: True
+    batch_size: 16
+    augmentation:
+      flip: True
+      colorjitter: [0, 0.3, 0, 0.3]  ## brightness, contrast, saturation, hue
+      ratio: [0.5, 1]
+      ro_angle: 30
+  
+  val:
+    meta_url: /home/supernet/DR_workspace/DR_project/datasets/CUB2011
+    scales: 256
+    crop_size: 224
+    shuffle: False
+    batch_size: 16
+
+  test:
+    meta_url: /home/supernet/DR_workspace/DR_project/datasets/CUB2011
+    ms_test: False
+    scales: 256
+    crop_size: 224
+    shuffle: False
+    batch_size: 32
+    checkpoints: ./results/checkpoints/ckpt_best.pth.tar
+    out_url: ./results/test_result/landuse.txt
+
+  num_workers: 12
+  num_cls: 200
+  pi_mean: [0.485, 0.456, 0.406]
+  pi_std: [0.229, 0.224, 0.225]
+
+train_params:
+  resume: None  #TBD
+  num_epoch: 200
+  optimizer:
+    type: SGD
+    kwargs:
+      lr: 0.01
+      momentum: 0.9
+      weight_decay: 0.0001
+    
+  lr_schedule:
+    type: MultiStepLR
+    kwargs:
+      milestones: [90, 150, 180]
+      gamma: 0.1  
+
+net:
+  name: eb4_FWS_CUB200
+  branch_num: 4
+  subname: KDCCB.models.FWS_HE-LC-EfficientNet.model.efficientnet_b4
+  kwargs:
+    KL_w: 100
+    MSE_w: 0.5
+    branch_point: [3, 4, 5]
+    num_classes: 200
+    num_MBblock: 32
+
+save_params:
+  save_dir: ./results/checkpoints/
+
+load_params:
+  load_dir: ./results/checkpoints/ckpt_best.pth.tar
+  vis_dir: ./results/vis_pred/
+  results_dir: ./results
