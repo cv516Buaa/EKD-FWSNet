@@ -17,11 +17,13 @@ We select CIFAR, tiny-ImageNet, CUB-200 and ImageNet as benchmark datasets.
 
 **CIFAR**
 
-     Create CIFAR folder and download CIFAR-10/100 dataset. Move 'cifar-10-batches-py' and 'cifar-100-python' to CIFAR folder.
+     Create CIFAR folder and download CIFAR-10/100 dataset. 
+     Move 'cifar-10-batches-py' and 'cifar-100-python' to CIFAR folder.
 
 **tiny-ImageNet**
 
-     Create tiny-imagenet-200 folder and download tiny-imagenet dataset. Move 'tiny_imagenet-200_all' and 'anno' to tiny-imagenet-200 folder.
+     Create tiny-imagenet-200 folder and download tiny-imagenet dataset. 
+     Move 'tiny_imagenet-200_all' and 'anno' to tiny-imagenet-200 folder.
 
 **LoveDA**
     
