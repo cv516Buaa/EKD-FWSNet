@@ -1,6 +1,6 @@
 # EKD-FWSNet
 
-This repo is the implementation of ["Make Baseline Model Stronger: Embedded Knowledge Distillation in Weight-Sharing Based Ensemble Network"](https://www.bmvc2021-virtualconference.com/assets/papers/0212.pdf). The BMVC paper is extended and submitted to TCSVT. 
+This repo is the implementation of ["Make Baseline Model Stronger: Embedded Knowledge Distillation in Weight-Sharing Based Ensemble Network"](https://www.bmvc2021-virtualconference.com/assets/papers/0212.pdf). This paper is published in BMVC and extended version published in TCSVT. 
 
 <table>
     <tr>
